@@ -5,6 +5,9 @@ import jwt_decode from "jwt-decode";
 import NotFound from "./pages/NotFound.js";
 import Skeleton from "./pages/Skeleton.js";
 import Feed from "./pages/Feed.js";
+import Matches from "./pages/Matches.js";
+import Profile from "./pages/Profile.js";
+
 
 import "../utilities.css";
 
