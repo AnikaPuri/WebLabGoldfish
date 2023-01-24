@@ -7,6 +7,7 @@ import Skeleton from "./pages/Skeleton.js";
 import Feed from "./pages/Feed.js";
 import Matches from "./pages/Matches.js";
 import Profile from "./pages/Profile.js";
+import NavBar from "./modules/NavBar.js";
 
 
 import "../utilities.css";
