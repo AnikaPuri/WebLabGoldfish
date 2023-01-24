@@ -39,13 +39,13 @@ const NavBar = ({ userId, handleLogin, handleLogout }) => {
               }}
             >
           Logout
-        </button>
-      ) : (
-        <GoogleLogin onSuccess={handleLogin} onError={(err) => console.log(err)} />
-      )}
+          </button>
+          ) : (
+            <GoogleLogin onSuccess={handleLogin} onError={(err) => console.log(err)} />
+          )}
         </div>
       </nav>
-      <h1>Good luck on your project :)</h1>
+      
     </GoogleOAuthProvider>
   );
 };

@@ -36,8 +36,9 @@ const Explore = (props) => {
 //     </>
 //   );
   return (  
-    <div> {JSON.stringify(users)} 
-    <img src="gf1.PNG"></img>
+    <div> 
+      {JSON.stringify(users)} 
+      <img src="gf1.PNG"></img>
     </div>   
   )
 };
