@@ -35,7 +35,12 @@ const Explore = (props) => {
 //       {storiesList}
 //     </>
 //   );
-  return <div> {JSON.stringify(users)} </div>
+  return (
+    <div> 
+      <h1>good luck!</h1>
+      {JSON.stringify(users)} 
+    </div>
+  ) 
 };
 
 export default Explore;
