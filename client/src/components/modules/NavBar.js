@@ -20,7 +20,7 @@ const NavBar = ({ userId, handleLogin, handleLogout }) => {
             Explore
           </Link>
           {userId && (
-            <Link to={`/profile/`} className="NavBar-link">
+            <Link to="/profile/" className="NavBar-link">
               Profile
             </Link>
           )}
