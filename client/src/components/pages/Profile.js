@@ -8,15 +8,19 @@ const Profile = (props) => {
 
   useEffect(() => {
     document.title = "Profile Page";
-    get(`/api/user`, { userid: props.userId }).then((userObj) => setUser(userObj));
+    get("/api/whoami").then((userObj) => setUser(userObj));
   }, []);
 
   if (!user) {
     return (<div> Loading! </div>);
   }
+
+  // TODO: change later to include profile info
   return (
     <>
-      
+      <div>
+        your name is: {user.name}
+      </div>
     </>
   );
 };
