@@ -3,17 +3,15 @@ import React, { useState, useEffect } from "react";
 import { get } from "../../utilities";
 
 const Feed = (props) => {
-//   const [stories, setStories] = useState([]);
+  const [users, setUsers] = useState([]);
 
-//   // called when the "Feed" component "mounts", i.e.
-//   // when it shows up on screen
-//   useEffect(() => {
-//     document.title = "News Feed";
-//     get("/api/stories").then((storyObjs) => {
-//       let reversedStoryObjs = storyObjs.reverse();
-//       setStories(reversedStoryObjs);
-//     });
-//   }, []);
+  // called when the "Feed" component "mounts", i.e.
+  // when it shows up on screen
+  useEffect(() => {
+    get("/api/users").then((userObjs) => {
+      setUsers(userObjs)
+    });
+  }, []);
 
 //   let storiesList = null;
 //   const hasStories = stories.length !== 0;
@@ -37,6 +35,7 @@ const Feed = (props) => {
 //       {storiesList}
 //     </>
 //   );
+  return <div> {JSON.stringify(users)} </div>
 };
 
 export default Feed;
