@@ -12,18 +12,7 @@ const GOOGLE_CLIENT_ID = "875626601835-nlh62o0i41iqspllgddn883q5jsatt2v.apps.goo
 const NavBar = ({ userId, handleLogin, handleLogout }) => {
   return (
     <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
-      {userId ? (
-        <button
-          onClick={() => {
-            googleLogout();
-            handleLogout();
-          }}
-        >
-          Logout
-        </button>
-      ) : (
-        <GoogleLogin onSuccess={handleLogin} onError={(err) => console.log(err)} />
-      )}
+      
       <nav className="NavBar-container">
         <div className="NavBar-title u-inlineBlock">goldfish</div>
         <div className="NavBar-linkContainer u-inlineBlock">
@@ -38,6 +27,18 @@ const NavBar = ({ userId, handleLogin, handleLogout }) => {
           <Link to="/matches/" className="NavBar-link">
             Matches
           </Link>
+          {userId ? (
+        <button className="NavBar-link"
+          onClick={() => {
+            googleLogout();
+            handleLogout();
+          }}
+        >
+          Logout
+        </button>
+      ) : (
+        <GoogleLogin onSuccess={handleLogin} onError={(err) => console.log(err)} />
+      )}
         </div>
       </nav>
       <h1>Good luck on your project :)</h1>
