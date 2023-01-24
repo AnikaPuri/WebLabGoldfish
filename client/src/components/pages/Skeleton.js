@@ -1,5 +1,6 @@
 import React from "react";
 import { GoogleOAuthProvider, GoogleLogin, googleLogout } from "@react-oauth/google";
+import NavBar from "./modules/NavBar.js";
 
 import "../../utilities.css";
 import "./Skeleton.css";
