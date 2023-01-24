@@ -35,7 +35,11 @@ const Explore = (props) => {
 //       {storiesList}
 //     </>
 //   );
-  return <div> {JSON.stringify(users)} </div>
+  return (  
+    <div> {JSON.stringify(users)} 
+    <img src="gf1.PNG"></img>
+    </div>   
+  )
 };
 
 export default Explore;
