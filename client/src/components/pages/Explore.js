@@ -13,6 +13,15 @@ const Explore = (props) => {
     });
   }, []);
 
+  // TODO change later to something more informative
+  // if user is not signed in
+  if (!props.userId) {
+    return (
+      <div>
+        Welcome! Please sign in.
+      </div>
+    );
+  }
 //   let storiesList = null;
 //   const hasStories = stories.length !== 0;
 //   if (hasStories) {
@@ -37,8 +46,8 @@ const Explore = (props) => {
 //   );
   return (  
     <div> 
-      {JSON.stringify(users)} 
-      <img src="gf1.PNG"></img>
+      <img src="gf1.PNG" />
+      users list: {JSON.stringify(users)} 
     </div>   
   )
 };
