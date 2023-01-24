@@ -9,7 +9,7 @@ import "./NavBar.css";
 //DONE REPLACE WITH YOUR OWN CLIENT_ID
 const GOOGLE_CLIENT_ID = "875626601835-nlh62o0i41iqspllgddn883q5jsatt2v.apps.googleusercontent.com";
 
-const Skeleton = ({ userId, handleLogin, handleLogout }) => {
+const NavBar = ({ userId, handleLogin, handleLogout }) => {
   return (
     <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
       {userId ? (
@@ -45,4 +45,4 @@ const Skeleton = ({ userId, handleLogin, handleLogout }) => {
   );
 };
 
-export default Skeleton;
+export default NavBar;
