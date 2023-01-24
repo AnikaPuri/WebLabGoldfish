@@ -16,24 +16,28 @@ const NavBar = ({ userId, handleLogin, handleLogout }) => {
       <nav className="NavBar-container">
         <div className="NavBar-title u-inlineBlock">goldfish</div>
         <div className="NavBar-linkContainer u-inlineBlock">
-          <Link to="/" className="NavBar-link">
-            Explore
-          </Link>
+          {userId && (
+            <Link to="/" className="NavBar-link">
+              Explore
+            </Link>
+          )}
           {userId && (
             <Link to="/profile/" className="NavBar-link">
               Profile
             </Link>
           )}
-          <Link to="/matches/" className="NavBar-link">
-            Matches
-          </Link>
+          {userId && (
+            <Link to="/matches/" className="NavBar-link">
+              Matches
+            </Link>
+          )}
           {userId ? (
-        <button className="NavBar-link"
-          onClick={() => {
-            googleLogout();
-            handleLogout();
-          }}
-        >
+            <button className="NavBar-link"
+              onClick={() => {
+                googleLogout();
+                handleLogout();
+              }}
+            >
           Logout
         </button>
       ) : (
