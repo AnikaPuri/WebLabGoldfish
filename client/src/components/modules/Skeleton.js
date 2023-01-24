@@ -1,5 +1,6 @@
 import React from "react";
 import { GoogleOAuthProvider, GoogleLogin, googleLogout } from "@react-oauth/google";
+import { Link } from "@reach/router";
 
 
 import "../../utilities.css";
@@ -24,20 +25,20 @@ const Skeleton = ({ userId, handleLogin, handleLogout }) => {
         <GoogleLogin onSuccess={handleLogin} onError={(err) => console.log(err)} />
       )}
       <nav className="NavBar-container">
-        {/* <div className="NavBar-title u-inlineBlock">goldfish</div>
+        <div className="NavBar-title u-inlineBlock">goldfish</div>
         <div className="NavBar-linkContainer u-inlineBlock">
           <Link to="/" className="NavBar-link">
             Explore
           </Link>
-          {props.userId && (
-            <Link to={`/profile/${props.userId}`} className="NavBar-link">
+          {userId && (
+            <Link to={`/profile/`} className="NavBar-link">
               Profile
             </Link>
           )}
           <Link to="/matches/" className="NavBar-link">
             Matches
           </Link>
-        </div> */}
+        </div>
       </nav>
       <h1>Good luck on your project :)</h1>
     </GoogleOAuthProvider>
