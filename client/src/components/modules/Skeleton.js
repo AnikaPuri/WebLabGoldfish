@@ -3,6 +3,8 @@ import { GoogleOAuthProvider, GoogleLogin, googleLogout } from "@react-oauth/goo
 import { Link } from "@reach/router";
 
 
+
+
 import "../../utilities.css";
 import "./NavBar.css";
 
@@ -30,11 +32,11 @@ const Skeleton = ({ userId, handleLogin, handleLogout }) => {
           <Link to="/" className="NavBar-link">
             Explore
           </Link>
-          {userId && (
+          {/* {userId && (
             <Link to={`/profile/`} className="NavBar-link">
               Profile
             </Link>
-          )}
+          )} */}
           <Link to="/matches/" className="NavBar-link">
             Matches
           </Link>
