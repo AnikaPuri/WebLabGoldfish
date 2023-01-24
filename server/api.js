@@ -43,9 +43,16 @@ router.post("/initsocket", (req, res) => {
 // | write your API methods below!|
 // |------------------------------|
 
-// router.get("/users", (req, res) => {
-//   User.find({}).then((users) => res.send(users));
-// })
+router.post("/users", (req, res) => {
+  const newUser = new User ({
+    name: req.body.name,
+    googleid: req.body.googleid,
+  })
+})
+
+router.get("/users", (req, res) => {
+  User.find({}).then((users) => res.send(users));
+})
 
 // anything else falls to this "not found" case
 router.all("*", (req, res) => {
