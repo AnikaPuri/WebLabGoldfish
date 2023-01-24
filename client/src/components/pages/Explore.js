@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { get } from "../../utilities";
 
-const Feed = (props) => {
+const Explore = (props) => {
   const [users, setUsers] = useState([]);
 
   // called when the "Feed" component "mounts", i.e.
@@ -38,4 +38,4 @@ const Feed = (props) => {
   return <div> {JSON.stringify(users)} </div>
 };
 
-export default Feed;
+export default Explore;

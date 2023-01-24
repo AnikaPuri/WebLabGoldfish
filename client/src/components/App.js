@@ -4,7 +4,7 @@ import jwt_decode from "jwt-decode";
 
 import NavBar from "./modules/NavBar.js";
 import NotFound from "./pages/NotFound.js";
-import Feed from "./pages/Feed.js";
+import Explore from "./pages/Explore.js";
 import Matches from "./pages/Matches.js";
 import Profile from "./pages/Profile.js";
 
@@ -49,7 +49,7 @@ const App = () => {
     <>
       <Router>
         <NavBar path="/" handleLogin={handleLogin} handleLogout={handleLogout} userId={userId} />
-        <Feed path="/feed" />
+        <Explore path="/explore" />
         <NotFound default />
       </Router>
     </>
